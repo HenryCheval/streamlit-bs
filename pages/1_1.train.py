@@ -6,6 +6,13 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import to_categorical
 import streamlit as st
+
+# intro.py
+import streamlit as st
+def app():
+ st.header('简介')
+ st.write('这是简介页面的内容...')
+
 # 加载 MNIST 数据集
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 # 数据预处理

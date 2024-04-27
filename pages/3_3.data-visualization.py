@@ -2,6 +2,13 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# intro.py
+import streamlit as st
+def app():
+ st.header('简介')
+ st.write('这是简介页面的内容...')
+
 # Streamlit page configuration
 st.title('Bird Data Analysis')
 # Introduction in markdown
