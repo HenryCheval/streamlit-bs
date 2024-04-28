@@ -10,7 +10,6 @@
 import importlib
 import streamlit as st
 def main():
- st.set_page_config(page_title="Learn AI more easily", page_icon="👋")
  st.sidebar.title('Navigation')
  st.title("An interactive and visual Machine Learning book")
 
@@ -53,4 +52,5 @@ markdown_text = """
 st.markdown(markdown_text)
 
 if __name__ == "__main__":
+ st.set_page_config(page_title="Learn AI more easily", page_icon="👋")
  main()
