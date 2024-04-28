@@ -4,8 +4,29 @@ import matplotlib.pyplot as plt
 
 st.write("""
 # Stack Overflow在2020年调查的开发者薪水情况
-         数据经过修剪，保留主要国家与中位数附近的样本
+[数据来源](https://survey.stackoverflow.co/)
+          
+ 
 """)
+
+def load_data():
+    df = pd.read_csv("survey_results_public.csv")
+    st.write("加载完毕！")
+    return df
+
+def show_head(df):
+    st.write(df.head())
+
+
+if st.button("加载和显示数据"):
+    df = load_data()
+    show_head(df)
+
+
+st.write("""
+由于数据量庞大，我们修剪并保留主要国家与中位数附近的样本，以下为处理后的数据分布情况
+""")
+
 
 def shorten_categories(categories, cutoff):
     categorical_map = {}
@@ -58,13 +79,7 @@ def load_data():
 df = load_data()
 
 def show_explore_page():
-    st.title("Explore Software Engineer Salaries")
-
-    st.write(
-        """
-    ### Stack Overflow Developer Survey 2020
-    """
-    )
+    
 
     data = df["Country"].value_counts()
 
@@ -72,13 +87,13 @@ def show_explore_page():
     ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
     ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-    st.write("""#### Number of Data from different countries""")
+    st.write("""#### 来自不同国家的样本数""")
 
     st.pyplot(fig1)
     
     st.write(
         """
-    #### Mean Salary Based On Country
+    #### 基于国家的平均薪资
     """
     )
 
@@ -87,10 +102,11 @@ def show_explore_page():
 
     st.write(
         """
-    #### Mean Salary Based On Experience
+    ####  基于工作经验的平均薪资
     """
     )
 
     data = df.groupby(["YearsCodePro"])["Salary"].mean().sort_values(ascending=True)
     st.line_chart(data)
 
+show_explore_page()
