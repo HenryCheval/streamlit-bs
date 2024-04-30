@@ -10,7 +10,6 @@
 import importlib
 import streamlit as st
 def main():
- st.sidebar.title('Navigation')
  st.title("An interactive and visual Machine Learning book")
 
 markdown_text = """

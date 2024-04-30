@@ -48,7 +48,7 @@ class StreamlitCallback(tf.keras.callbacks.Callback):
         self.val_accuracy.append(logs['val_accuracy'])
         
         # 在Streamlit中打印并显示损失和准确率的曲线图
-        st.write(f"Epoch: {epoch + 1}, Loss: {logs['loss']}, Acc: {logs['accuracy']}, Val Loss: {logs['val_loss']}, Val Acc: {logs['val_accuracy']}")
+        st.info(f"Epoch: {epoch + 1}, Loss: {logs['loss']}, Acc: {logs['accuracy']}, Val Loss: {logs['val_loss']}, Val Acc: {logs['val_accuracy']}")
         # 绘制损失和准确率的曲线图
         fig, ax = plt.subplots(1, 2, figsize=(10, 4))
         ax[0].plot(self.loss, label='train_loss')
