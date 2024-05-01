@@ -10,7 +10,7 @@ st.write("""
 """)
 
 def load_data():
-    df = pd.read_csv("survey_results_public.csv")
+    df = pd.read_csv("data/survey_results_public.csv")
     st.write("加载完毕！")
     return df
 
@@ -58,7 +58,7 @@ def clean_education(x):
 
 
 def load_data():
-    df = pd.read_csv("survey_results_public.csv")
+    df = pd.read_csv("data/survey_results_public.csv")
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedComp"]]
     df = df[df["ConvertedComp"].notnull()]
     df = df.dropna()
