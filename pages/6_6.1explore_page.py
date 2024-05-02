@@ -3,8 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 st.write("""
-# Stack Overflow在2020年调查的开发者薪水情况
-[数据来源](https://survey.stackoverflow.co/)
+# 用于预测的数据样本展示
+#### 数据源于Stack Overflow在2020年调查的开发者薪水情况\n
+##### [来源](https://survey.stackoverflow.co/)
           
  
 """)
