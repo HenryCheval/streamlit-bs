@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
 # 页面标题
 st.title("CNN可视化展示")
@@ -21,5 +22,5 @@ url = "https://static-1300131294.cos.ap-shanghai.myqcloud.com/html/cnn-vis-3/ind
 width = 1200 # 可以根据目标用户的平均屏幕宽度调整
 height = 800   # 同样，根据内容调整高度
 
-st.components.v1.iframe(url, width=width, height=height)
+components.iframe(url, width=width, height=height)
 

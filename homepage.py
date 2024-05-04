@@ -10,11 +10,10 @@
 import importlib
 import streamlit as st
 
-st.title("An interactive and visual Machine Learning book")
+st.title("欢迎来到我们的可视化学习驱动的机器学习教学平台！")
 
 markdown_text = """
 
-### 欢迎来到我们的可视化学习驱动的机器学习教学平台！
 
 在这里，我们不会深入探讨机器学习的每个技术细节，也不会涵盖所有机器学习的章节。然而，我们精心准备的可视化内容将帮助您生动地理解数据处理与模型训练等过程。通过交互式的展示，您将更轻松地掌握复杂概念，并能够在实践中加深理解。
 
