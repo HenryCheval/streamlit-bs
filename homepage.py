@@ -9,47 +9,30 @@
 #st.sidebar.success("Select a page above.")
 import importlib
 import streamlit as st
-def main():
- st.title("An interactive and visual Machine Learning book")
+
+st.title("An interactive and visual Machine Learning book")
 
 markdown_text = """
-# 课程大纲
-## 一简介 (Introduction)
-- 1.1 什么是Streamlit
-- 1.2 Streamlit的主要优势
-- 1.3 Streamlit环境的搭建与基本使用
-## 二 数据分析可视化 (Data Analysis Visualization)
-- 2.1 导入数据及Streamlit展示
-- 2.2 数据维度和描述性统计展示
-- 2.3 数据分布及相关性分析
-- 2.4 交互式数据筛选和展示
-## 三 机器学习概述 (Overview of Machine Learning)
-- 3.1 什么是机器学习
-- 3.2 机器学习主要类型：监督学习、无监督学习、半监督学习及强化学习
-- 3.3 机器学习模型的训练与评估
-## 四 监督学习及可视化 (Supervised Learning and Visualization)
-- 4.1 分类问题的模型选择及训练
-- 4.2 回归问题的模型选择及训练
-- 4.3 实时显示模型训练进程和效果
-- 4.4 结果的交互式展示
-## 五 无监督学习及可视化 (Unsupervised Learning and Visualization)
-- 5.1 聚类问题的模型选择及训练
-- 5.2 降维问题的模型选择及训练
-- 5.3 实时显示模型训练进程和效果
-- 5.4 结果的交互式展示
-## 六 深度学习的可视化 (Deep Learning Visualization)
-- 6.1 深度学习模型的构建和训练
-- 6.2 实时显示训练过程和指标变化
-- 6.3 对CNN模型的显示，如显示卷积核或在训练过程中显示图片的特征图
-- 6.4 结果的交互式展示
-## 七 模型优化的可视化 (Model Optimization Visualization)
-- 7.1 超参数选择和调整的可视化
-- 7.2 交叉验证策略
-- 7.3 调优结果的交互式展示
+
+### 欢迎来到我们的可视化学习驱动的机器学习教学平台！
+
+在这里，我们不会深入探讨机器学习的每个技术细节，也不会涵盖所有机器学习的章节。然而，我们精心准备的可视化内容将帮助您生动地理解数据处理与模型训练等过程。通过交互式的展示，您将更轻松地掌握复杂概念，并能够在实践中加深理解。
+
+除此之外，我们还将向您展示机器学习在各领域的应用，让您了解这一强大技术在现实世界中的广泛应用场景。无论您是初学者还是经验丰富的专业人士，我们都相信这里的内容能够为您带来新的启发和认识。
+
+赶快开始您的机器学习之旅吧！探索可视化，探索应用，发现更多可能性！
+### 课程大纲
+- 1 训练第一个模型
+- 2 数据处理与可视化
+- 3.1 机器学习分类器简介
+- 3.2 机器学习分类器演示
+- 4.1 薪资数据集展示
+- 4.2 薪资预测
+- 5.1 图像识别
+- 5.2 训练自己的模型
+- 6.1 卷积神经网络入门与演示
+- 6.2 卷积神经网络应用：数字识别
 """
 # 用streamlit展示markdown文本
 st.markdown(markdown_text)
 
-if __name__ == "__main__":
- #st.set_page_config(page_title="Learn AI more easily", page_icon="👋")
- main()
