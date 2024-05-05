@@ -10,7 +10,7 @@
 import importlib
 import streamlit as st
 
-st.title("欢迎来到我们的可视化学习驱动的机器学习教学平台！")
+st.title("欢迎来到我们的可视化机器学习教学平台！")
 
 markdown_text = """
 

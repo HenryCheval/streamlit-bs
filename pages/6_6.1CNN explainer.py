@@ -18,9 +18,8 @@ md_text="""
 st.markdown(md_text)
 # 使用iframe嵌入外部网页
 url = "https://static-1300131294.cos.ap-shanghai.myqcloud.com/html/cnn-vis-3/index.html"
-
-width = 1200 # 可以根据目标用户的平均屏幕宽度调整
-height = 800   # 同样，根据内容调整高度
+width = 1200
+height = 800
 
 components.iframe(url, width=width, height=height)
 
