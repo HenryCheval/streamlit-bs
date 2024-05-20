@@ -10,6 +10,7 @@ st.write("""
  
 """)
 
+@st.cache_data
 def load_data():
     df = pd.read_csv("data/survey_results_public.csv")
     st.write("加载完毕！")

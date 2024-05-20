@@ -92,14 +92,18 @@ def print_summary(history):
     st.write(f"- 最终验证损失: {final_val_loss:.4f}")
     st.write(f"- 最终验证准确率: {final_val_accuracy:.4f}")
 
-
+@st.cache_data
 def intro_text():
     st.title('手写数字识别应用')
     st.write("""
     此应用使用深度学习模型来识别手写数字（0-9）。它基于著名的MNIST数据集，这是最常用于入门深度学习和计算机视觉的数据集之一。
     
     这个模型是一个简单的神经网络，包括输入层、一个隐藏层和输出层，能够从0到9的手写数字图像中识别数字。
+    """)
 
+    st.image('data/MNIST.png', caption='MNIST手写数据集', use_column_width=True)
+
+    st.write("""
     ### 功能和特点
     - **数据集**: MNIST（Mixed National Institute of Standards and Technology database）是美国国家标准与技术研究院收集整理的大型手写数字数据集，包含60,000个训练图像和10,000个测试图像，每个图像都是28x28像素的灰度图。
     - **模型结构**: 一个输入层，一个具有ReLU激活的隐藏层，以及一个具有Softmax激活的输出层，用于进行10分类（数字0-9）。
@@ -107,7 +111,6 @@ def intro_text():
     
     如果您现在不知道这些概念也完全没关系，使用这个应用，即使没有深度学习或编程的复杂背景，您也可以轻松地了解和参与到构建和训练一个机器学习模型的过程中。
     """)
-
 md_text="""
 - **Epoch**: 这是指模型完整遍历整个训练数据集一次的过程。一个epoch包含多个批次(batch)的数据处理。在深度学习中，通常会设定模型训练多个epochs以优化模型参数。
 - **Loss**: 损失(Loss)是衡量模型预测结果与真实标签之间差距的一个量化指标。在训练过程中，模型试图通过优化算法（如Adam）最小化这个损失值。
