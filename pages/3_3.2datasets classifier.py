@@ -103,8 +103,8 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 
-st.write(f'分类器: {classifier_name}')
-st.write(f'准确度: {acc}')
+st.info(f'分类器: {classifier_name}')
+st.info(f'准确度: {acc}')
 
 # 数据集可视化
 pca = PCA(2)
