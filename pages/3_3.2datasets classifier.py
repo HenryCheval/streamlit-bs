@@ -75,7 +75,7 @@ def add_parameter_ui(clf_name):
     else: # 随机森林
         max_depth = st.slider('最大深度', 2, 15, step=1, help="树的最大深度。更深的树可以捕捉更复杂的模式，但也更容易过拟合。")
         params['max_depth'] = max_depth
-        n_estimators = st.slider('树的数量', 1, 500, step=10, help="森林中树的数量。更多的树可以提高模型的性能，但会增加计算成本。")
+        n_estimators = st.slider('树的数量', 1, 20, step=1, help="森林中树的数量。更多的树可以提高模型的性能，但会增加计算成本。")
         params['n_estimators'] = n_estimators
         min_samples_split = st.slider('最小样本分割数', 2, 20, step=1, help="决策树节点分裂所需的最小样本数。增加这个参数可以防止过拟合。")
         params['min_samples_split'] = min_samples_split

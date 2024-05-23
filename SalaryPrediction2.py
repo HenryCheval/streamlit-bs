@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 读取CSV文件并创建DataFrame
-df = pd.read_csv("survey_results_public.csv")
+df = pd.read_csv("data/survey_results_public.csv")
 
 # 展示DataFrame的前几行数据
 df.head()

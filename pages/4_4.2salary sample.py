@@ -2,12 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.title("处理后的数据展示")
 st.write("""
-# 用于预测的数据样本展示
-#### 数据源于Stack Overflow在2020年调查的开发者薪水情况\n
-##### [来源](https://survey.stackoverflow.co/)
-          
- 
+
+#### **处理后**的数据可以保存在pickle文件中。
+#### 我们可以绘制一些图表来展示数据处理完成后的分布情况。
 """)
 
 @st.cache_data
@@ -20,14 +19,12 @@ def show_head(df):
     st.write(df.head())
 
 
-if st.button("加载和显示数据"):
+if st.button("处理之前的表格"):
     df = load_data()
     show_head(df)
 
 
-st.write("""
-由于数据量庞大，我们修剪并保留主要国家与中位数附近的样本，以下为**处理后**的数据分布情况
-""")
+
 
 
 def shorten_categories(categories, cutoff):
