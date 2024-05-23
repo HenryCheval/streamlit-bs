@@ -36,7 +36,7 @@ if uploaded_file is not None:
 
     st.write('预测结果：')
     for (imagenet_id, label, score) in decoded_predictions:
-        st.info(f"{label}: {score:.2f}%")
+        st.info(f"{label}: {score * 100:.2f}%")
 
 # 显示默认图片
 else:
@@ -61,4 +61,4 @@ else:
 
         st.write('预测结果：')
         for (imagenet_id, label, score) in decoded_predictions:
-            st.info(f"{label}: {score:.2f}%")
+            st.info(f"{label}: {score * 100:.2f}%")
