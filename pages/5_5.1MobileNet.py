@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 设置页面标题
-st.title("MobileNet与MobileNetV2介绍")
+st.title("MobileNet介绍")
 
 
 st.header("前言")
